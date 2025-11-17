@@ -37,7 +37,7 @@ export function NavMain({ items = [] }) {
 
     return (
         <SidebarGroup className="px-2 py-0">
-            <SidebarGroupLabel>Platform</SidebarGroupLabel>
+            {/* <SidebarGroupLabel>Platforms</SidebarGroupLabel> */}
 
             <SidebarMenu>
                 {items.map((item) => {

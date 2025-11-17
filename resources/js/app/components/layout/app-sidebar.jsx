@@ -15,7 +15,7 @@ import { NavUser } from './nav-user';
 
 const mainNavItems = [
     {
-        title: 'Dashboard',
+        title: 'Attendance Table',
         href: '/administrator/dashboard',
         icon: LayoutGrid,
     },
@@ -51,18 +51,18 @@ const mainNavItems = [
     // },
 ];
 
-const footerNavItems = [
-    {
-        title: 'Repository',
-        href: 'https://github.com/laravel/react-starter-kit',
-        icon: Folder,
-    },
-    {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits#react',
-        icon: BookOpen,
-    },
-];
+// const footerNavItems = [
+//     {
+//         title: 'Repository',
+//         href: 'https://github.com/laravel/react-starter-kit',
+//         icon: Folder,
+//     },
+//     {
+//         title: 'Documentation',
+//         href: 'https://laravel.com/docs/starter-kits#react',
+//         icon: BookOpen,
+//     },
+// ];
 
 export function AppSidebar() {
     return (
@@ -72,7 +72,7 @@ export function AppSidebar() {
                     <SidebarMenuItem>
                         <SidebarMenuButton size="lg" asChild>
                             <Link href={'/administrator/dashboard'} prefetch>
-                                <div className="ml-1 grid flex-1 text-left text-sm">
+                                <div className="ml-1 grid flex-1 text-center h-full text-lg">
                                     <span className="mb-0.5 truncate leading-tight font-semibold">
                                         Attendance System
                                     </span>
@@ -88,7 +88,7 @@ export function AppSidebar() {
             </SidebarContent>
 
             <SidebarFooter>
-                <NavFooter items={footerNavItems} className="mt-auto" />
+                {/* <NavFooter items={footerNavItems} className="mt-auto" /> */}
                 <NavUser />
             </SidebarFooter>
         </Sidebar>

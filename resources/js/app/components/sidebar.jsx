@@ -1,6 +1,6 @@
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
-import { PanelLeftIcon } from 'lucide-react';
+import { AlignCenter, AlignJustify, PanelLeftIcon } from 'lucide-react';
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIsMobile } from '../hooks/use-mobile';
@@ -192,7 +192,7 @@ function SidebarTrigger({ className, onClick, ...props }) {
             }}
             {...props}
         >
-            <PanelLeftIcon />
+            <AlignJustify />
             <span className="sr-only">Toggle Sidebar</span>
         </Button>
     );
@@ -445,7 +445,7 @@ function SidebarMenuAction({
                 'peer-data-[size=lg]/menu-button:top-2.5',
                 'group-data-[collapsible=icon]:hidden',
                 showOnHover &&
-                    'group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 peer-data-[active=true]/menu-button:text-sidebar-accent-foreground data-[state=open]:opacity-100 md:opacity-0',
+                'group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 peer-data-[active=true]/menu-button:text-sidebar-accent-foreground data-[state=open]:opacity-100 md:opacity-0',
                 className,
             )}
             {...props}
