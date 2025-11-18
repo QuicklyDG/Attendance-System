@@ -9,9 +9,7 @@ class AttendanceController extends Controller
 {
     public function index()
     {
-        $attendance = Attendance::with(['user'])
-            ->orderBy('site', 'desc')
-            ->orderBy('dept', 'asc')
+        $attendance = Attendance::orderBy('id', 'asc')
             ->get();
         return response()->json([
             'result' => $attendance

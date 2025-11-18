@@ -13,7 +13,7 @@ import TextLink from '../../../components/text-link';
 export default function Page({ status, canResetPassword }) {
     return (
         <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-background p-6 md:p-10">
-            <div className="w-full max-w-sm">
+            <div className="w-400 max-w-sm rounded-lg bg-blue-100 p-4 shadow-lg sm:px-6 lg:px-8">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col items-center gap-4">
                         <Link
@@ -28,7 +28,7 @@ export default function Page({ status, canResetPassword }) {
                             </span>
                         </Link>
 
-                        <div className="space-y-2 text-center">
+                        <div className="space-y-2 bg-transparent text-center">
                             <h1 className="text-xl font-medium">
                                 Log in to your account
                             </h1>

@@ -1,7 +1,8 @@
 import { Head } from '@inertiajs/react';
-import { PlaceholderPattern } from '../../../components/placeholder-pattern';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { get_attendance_thunk } from '../../../redux/attendance-thunk';
 import Layout from '../layout';
-import { Skeleton } from '../../../components/skeleton';
 import AttendanceTableSection from './section/attendance-table-section';
 
 const breadcrumbs = [
@@ -14,7 +15,14 @@ const breadcrumbs = [
     //     href: '/administrator/users',
     // },
 ];
+
 export default function Page() {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(get_attendance_thunk());
+    }, [dispatch]);
+
     return (
         <Layout breadcrumbs={breadcrumbs}>
             <Head title="Attendance" />
